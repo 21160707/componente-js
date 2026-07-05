@@ -1,0 +1,62 @@
+.acordeon-contenedor {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.acordeon-item {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.acordeon-header {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.acordeon-header:hover {
+    background-color: #eecfba; /* Un tono cálido sutil */
+}
+
+
+.acordeon-icono {
+    transition: transform 0.3s ease; 
+}
+
+.acordeon-content {
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease-out; 
+    background-color: #ffffff;
+}
+
+.acordeon-texto {
+    padding: 20px;
+    color: #555555;
+    line-height: 1.6;
+    border-top: 1px solid #f1f1f1;
+}
+
+
+.acordeon-item.activo .acordeon-content {
+    max-height: 200px; 
+}
+
+.acordeon-item.activo .acordeon-icono {
+    transform: rotate(180deg);
+}

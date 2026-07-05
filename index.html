@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componente Interactivo | Acordeón Reutilizable</title>
+    <link rel="stylesheet" href="css/componente.css">
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 { text-align: center; color: #2c3e50; }
+        h2 { color: #34495e; margin-top: 40px; text-align: center; }
+        .seccion-demo { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+
+    <h1>Demostración de Componente Visual Reutilizable</h1>
+    <p style="text-align: center; color: #7f8c8d;">Diseño de interfaces dinámicas sin frameworks nativos.</p>
+
+    <div class="seccion-demo">
+        
+        <h2>📌 Preguntas Frecuentes - Instituto Tecnológico</h2>
+        <div id="acordeon-escolar"></div>
+
+        <h2>🛠️ Sección de Soporte Técnico</h2>
+        <div id="acordeon-soporte"></div>
+
+    </div>
+
+    <script src="js/componente.js"></script>
+    
+    <script>
+        const datosEscuela = [
+            { 
+                pregunta: "¿Cómo puedo consultar mi horario de clases?", 
+                respuesta: "Puedes revisarlo directamente ingresando al portal del SII con tu número de control y contraseña en la sección de Consultas." 
+            },
+            { 
+                pregunta: "¿Cuáles son los requisitos para liberar el servicio social?", 
+                respuesta: "Haber cubierto al menos el 70% de tus créditos académicos, entregar tu carta de presentación y completar las 500 horas reglamentarias." 
+            }
+        ];
+
+        const datosSoporte = [
+            { 
+                pregunta: "Mi contraseña del correo institucional está bloqueada, ¿qué hago?", 
+                respuesta: "Debes enviar un correo al departamento de cómputo con una captura de tu credencial vigente para solicitar el restablecimiento." 
+            },
+            { 
+                pregunta: "¿Cómo me conecto a la red Wi-Fi del campus?", 
+                respuesta: "Selecciona la red 'Tec-WIFI', ingresa con tu número de control como usuario y tu clave de acceso del SII como contraseña." 
+            }
+        ];
+
+        crearAcordeon('acordeon-escolar', datosEscuela);
+        crearAcordeon('acordeon-soporte', datosSoporte);
+    </script>
+</body>
+</html>
